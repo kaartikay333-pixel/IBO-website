@@ -12,6 +12,15 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Automatically route to standalone build if running static on GitHub Pages or local file
+      if (
+        (window.location.hostname.endsWith('github.io') || window.location.protocol === 'file:') &&
+        !window.location.pathname.endsWith('standalone.html')
+      ) {
+        window.location.replace('./standalone.html' + window.location.search);
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
