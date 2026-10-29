@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: "Times New Roman", Times, "Baskerville", Georgia, serif;
+    --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: #f1f5f9;
+    background-color: #0c0f14;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-times {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Crisp range slider styling in dark mode without gradients */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  background-color: #1e293b;
+  border-radius: 4px;
+  border: 1px solid #334155;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  margin-top: -8px;
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+input[type="range"]:hover::-webkit-slider-thumb {
+  background-color: #f8fafc;
+  transform: scale(1.15);
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+  background-color: #38bdf8;
+  transform: scale(1.25);
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8px;
+  background-color: #1e293b;
+  border-radius: 4px;
+  border: 1px solid #334155;
+}
+
+input[type="range"]::-moz-range-thumb {
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #0f172a;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  transition: transform 0.1s ease, background-color 0.15s ease;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+  background-color: #f8fafc;
+  transform: scale(1.15);
+}

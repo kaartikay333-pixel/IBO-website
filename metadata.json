@@ -1,0 +1,6 @@
+{
+  "name": "IIM Benchmarking Index",
+  "description": "Institutional ranking and growth comparison platform for Indian Institutes of Management across audited compensation, ROI payback, research output, PhD faculty density, and cohort diversity metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
